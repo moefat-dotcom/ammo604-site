@@ -237,7 +237,7 @@ header.scrolled{background:rgba(251,250,247,.86);backdrop-filter:blur(14px);bord
 .aoc p{font-size:13px;color:var(--mut);margin-top:7px}
 @media(max-width:880px){.addon-grid{grid-template-columns:1fr}}
 /* WHY / TRUST */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(198px,1fr));gap:18px;margin-top:54px}
 .why{text-align:left}
 .why .ic{width:46px;height:46px;border-radius:13px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold-t);font-size:22px;margin-bottom:18px}
 .why h3{font-size:18px}
@@ -354,6 +354,12 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 .vid-frame video{width:100%;display:block;background:#000}
 .vid-badge{position:absolute;top:12px;left:12px;background:rgba(22,145,78,.96);color:#fff;font-weight:600;font-size:11px;letter-spacing:.04em;padding:6px 12px;border-radius:30px;display:inline-flex;align-items:center;gap:6px}
 .vid-badge i{font-size:14px}
+/* QUOTE BAND */
+.quote-band{background:var(--ink);color:#fff;text-align:center}
+.quote-band .qmark{font-size:32px;color:var(--green)}
+.quote-band blockquote{font-family:var(--disp);font-weight:500;font-style:italic;font-size:clamp(24px,3.7vw,42px);line-height:1.25;letter-spacing:-.01em;max-width:840px;margin:14px auto 0}
+.quote-band blockquote span{color:var(--green)}
+.quote-band cite{display:block;font-family:var(--body);font-style:normal;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#8a8a90;margin-top:24px}
 /* PROMO POPUP */
 .promo{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(8,8,10,.62);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
 .promo.show{opacity:1;visibility:visible}
@@ -446,7 +452,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h3>Send a photo</h3><p>Text us a picture of your car. We reply quickly with a clear, final price.</p></div>
       <div class="step reveal"><div class="n">2</div><h3>We come to you</h3><p>We arrive on time at your home or office and take care of everything, start to finish.</p></div>
-      <div class="step reveal"><div class="n">3</div><h3>Pay when you're happy</h3><p>Look it over with us first. You only pay once the car meets your standard.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Pay when it's done</h3><p>Look it over with us first, then settle up once the job is done, done right.</p></div>
     </div>
   </div>
 </section>
@@ -592,13 +598,23 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 <!-- WHY / TRUST -->
 <section id="why">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="eyebrow">Why AMMO 604</div><h2>Built to be the easy, trustworthy choice.</h2></div>
+    <div class="sec-head reveal"><div class="eyebrow">Why AMMO 604</div><h2>Five reasons drivers keep coming back.</h2></div>
     <div class="why-grid">
-      <div class="why reveal"><div class="ic"><i class="ti ti-home-2"></i></div><h3>We come to you</h3><p>Home or office, on your schedule. You never have to leave.</p></div>
-      <div class="why reveal"><div class="ic"><i class="ti ti-receipt-off"></i></div><h3>Transparent pricing</h3><p>The quote is the price. No travel fees, no surprises at the end.</p></div>
-      <div class="why reveal"><div class="ic"><i class="ti ti-hand-stop"></i></div><h3>Hand-finished care</h3><p>Careful methods and the right products for every surface of your car.</p></div>
-      <div class="why reveal"><div class="ic"><i class="ti ti-map-pin"></i></div><h3>Local &amp; reliable</h3><p>A Metro Vancouver business that shows up on time and stands behind the work.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-home-2"></i></div><h3>We come to you</h3><p>Your driveway is the shop. You never lift a finger or lose your parking spot.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-bolt"></i></div><h3>60-second quote</h3><p>Text one photo and get a real, final price back in about a minute.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-receipt-off"></i></div><h3>No hidden fees</h3><p>The price you see is the price you pay. Zero travel charge, ever.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-shield-check"></i></div><h3>Done right, guaranteed</h3><p>We don't pack up until it's perfect. You pay when the job's done.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-diamond"></i></div><h3>Any car, showroom finish</h3><p>Daily driver or dream car, every vehicle is treated like our own.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-band">
+  <div class="wrap">
+    <i class="ti ti-quote qmark" aria-hidden="true"></i>
+    <blockquote>A clean car won't fix your life. But it's a <span>suspiciously good</span> place to start.</blockquote>
+    <cite>AMMO 604 Auto Detailing</cite>
   </div>
 </section>
 
@@ -641,7 +657,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       <div class="q reveal"><button>Are there any extra fees for mobile service? <i class="ti ti-plus"></i></button><div class="ans"><p>None. There are no travel or transportation fees, ever. The price we quote is the final price, and mobile service is always included anywhere in our Metro Vancouver service area.</p></div></div>
       <div class="q reveal"><button>How long does a detail take? <i class="ti ti-plus"></i></button><div class="ans"><p>An interior or exterior detail usually takes one to two hours. A full detail typically takes two to four hours, depending on the size and condition of the car. We give you a time estimate with your quote.</p></div></div>
       <div class="q reveal"><button>How do I get a price? <i class="ti ti-plus"></i></button><div class="ans"><p>Text a photo of your car to 778-229-4212 and we will reply quickly with a clear, final price. You can also use the booking form below or call us directly.</p></div></div>
-      <div class="q reveal"><button>How do I pay? <i class="ti ti-plus"></i></button><div class="ans"><p>We accept cash and e-transfer. Payment is collected after the detail is finished and you are happy with the results.</p></div></div>
+      <div class="q reveal"><button>How do I pay? <i class="ti ti-plus"></i></button><div class="ans"><p>We accept cash and e-transfer. Payment is collected once the job is done.</p></div></div>
     </div>
   </div>
 </section>
@@ -728,7 +744,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 {"@context":"https://schema.org","@type":"AutoDetailing","name":"AMMO 604 Auto Detailing","image":"https://ammo604autodetailing.com/images/extra-detail.jpg","url":"https://ammo604autodetailing.com/","telephone":"+1-778-229-4212","email":"ammo604autodetailing@gmail.com","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Cash, e-Transfer","areaServed":["Burnaby","Vancouver","Coquitlam","Surrey","Richmond"],"address":{"@type":"PostalAddress","addressRegion":"BC","addressCountry":"CA","addressLocality":"Burnaby"},"sameAs":["https://instagram.com/AMMO604auto"],"makesOffer":[{"@type":"Offer","name":"Interior Detail (Sedan/Coupe)","price":"129","priceCurrency":"CAD"},{"@type":"Offer","name":"Exterior Detail (Sedan/Coupe)","price":"129","priceCurrency":"CAD"},{"@type":"Offer","name":"Full Detail (Sedan/Coupe)","price":"219","priceCurrency":"CAD"},{"@type":"Offer","name":"Interior Detail (SUV/Crossover)","price":"159","priceCurrency":"CAD"},{"@type":"Offer","name":"Exterior Detail (SUV/Crossover)","price":"159","priceCurrency":"CAD"},{"@type":"Offer","name":"Full Detail (SUV/Crossover)","price":"249","priceCurrency":"CAD"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are there any extra fees for mobile service?","acceptedAnswer":{"@type":"Answer","text":"No. There are no travel or transportation fees. The quoted price is the final price and mobile service is always included across our Metro Vancouver service area."}},{"@type":"Question","name":"How long does a detail take?","acceptedAnswer":{"@type":"Answer","text":"An interior or exterior detail usually takes one to two hours. A full detail typically takes two to four hours depending on size and condition."}},{"@type":"Question","name":"How do I get a price?","acceptedAnswer":{"@type":"Answer","text":"Text a photo of your car to 778-229-4212 and we reply quickly with a clear, final price. You can also use the booking form or call us."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"We accept cash and e-transfer, collected after the detail is finished and you are happy with the results."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are there any extra fees for mobile service?","acceptedAnswer":{"@type":"Answer","text":"No. There are no travel or transportation fees. The quoted price is the final price and mobile service is always included across our Metro Vancouver service area."}},{"@type":"Question","name":"How long does a detail take?","acceptedAnswer":{"@type":"Answer","text":"An interior or exterior detail usually takes one to two hours. A full detail typically takes two to four hours depending on size and condition."}},{"@type":"Question","name":"How do I get a price?","acceptedAnswer":{"@type":"Answer","text":"Text a photo of your car to 778-229-4212 and we reply quickly with a clear, final price. You can also use the booking form or call us."}},{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"We accept cash and e-transfer, collected once the job is done."}}]}
 </script>
 
 <script>
