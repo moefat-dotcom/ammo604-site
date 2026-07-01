@@ -1,0 +1,19 @@
+# Ammo 604 Auto Detailing - hosting config
+
+[[redirects]]
+  from = "https://www.ammo604autodetailing.com/*"
+  to = "https://ammo604autodetailing.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
