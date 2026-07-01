@@ -222,6 +222,20 @@ header.scrolled{background:rgba(251,250,247,.86);backdrop-filter:blur(14px);bord
 .nofees div{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:500;color:var(--ink)}
 .nofees i{color:var(--green);font-size:20px}
 
+/* ADD-ON SERVICES */
+.addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.aoc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:.3s}
+.aoc:hover{box-shadow:var(--sh-sm);transform:translateY(-4px)}
+.aoc .ba2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line2)}
+.aoc .ba2 figure{position:relative;margin:0}
+.aoc .ba2 img,.aoc .single img{width:100%;height:140px;object-fit:cover;display:block}
+.aoc .ba2 .tag{position:absolute;top:8px;left:8px;font-size:9.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:20px;color:#fff}
+.aoc .ba2 .tag.b{background:rgba(20,18,12,.72)} .aoc .ba2 .tag.a{background:var(--green)}
+.aoc .body{padding:18px 20px}
+.aoc h4{font-size:17px;font-family:var(--disp);font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.aoc h4 .pr{font-family:var(--body);font-weight:600;font-size:14px;color:var(--green-t);white-space:nowrap}
+.aoc p{font-size:13px;color:var(--mut);margin-top:7px}
+@media(max-width:880px){.addon-grid{grid-template-columns:1fr}}
 /* WHY / TRUST */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
 .why{text-align:left}
@@ -383,7 +397,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       </div>
     </div>
     <div class="hero-media reveal">
-      <div class="ph"><img src="images/extra-detail.jpg" alt="Freshly detailed car interior by AMMO 604 in Metro Vancouver" fetchpriority="high"><span class="cap"><i class="ti ti-circle-check"></i>Finished interior, Metro Vancouver</span></div>
+      <div class="ph"><img src="images/hero-tesla.jpg" alt="Satin grey Tesla detailed by AMMO 604 in Metro Vancouver" fetchpriority="high"><span class="cap"><i class="ti ti-circle-check"></i>Detailed in Metro Vancouver</span></div>
       <div class="float f1"><div><div class="stars">★★★★★</div></div><div><b>5.0</b><span>Local rating</span></div></div>
       <div class="float f2"><i class="ti ti-clock-hour-4"></i>Same-week booking</div>
     </div>
@@ -528,7 +542,34 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       <div><i class="ti ti-circle-check"></i>No hidden charges</div>
       <div><i class="ti ti-circle-check"></i>The listed price for your vehicle type is the price you pay</div>
     </div>
-    <p class="pk-note reveal" style="color:var(--mut)">Want pet hair removal, a full ceramic coating or headlight restoration as well? Just ask and we will include it in your quote.</p>
+    <div class="sec-head center" style="margin:60px auto 0;text-align:center"><h3 style="font-size:clamp(24px,3.4vw,34px)">Add-on services</h3><p style="color:var(--mut);font-size:15.5px;margin:12px auto 0;max-width:560px">Real results from real jobs. See the before and after of what each one does.</p></div>
+    <div class="addon-grid">
+      <div class="aoc reveal">
+        <div class="ba2"><figure><span class="tag b">Before</span><img src="images/paint-before.jpg" alt="Dull contaminated paint before polishing" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/paint-after.jpg" alt="Mirror gloss after paint polishing" loading="lazy"></figure></div>
+        <div class="body"><h4>Paint Polishing <span class="pr">By quote</span></h4><p>Swirls and dullness machine-polished to a deep, mirror finish.</p></div>
+      </div>
+      <div class="aoc reveal">
+        <div class="ba2"><figure><span class="tag b">Before</span><img src="images/paint-before.jpg" alt="Rough contaminated paint before clay bar" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/rocker-gloss.jpg" alt="Glass-smooth glossy paint after clay bar" loading="lazy"></figure></div>
+        <div class="body"><h4>Clay Bar <span class="pr">$30</span></h4><p>Pulls bonded grime out of the paint for a glass-smooth surface.</p></div>
+      </div>
+      <div class="aoc reveal">
+        <div class="ba2"><figure><span class="tag b">Before</span><img src="images/paint-before.jpg" alt="Unprotected paint before ceramic spray" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/tesla-fender.jpg" alt="Glossy protected paint after ceramic spray" loading="lazy"></figure></div>
+        <div class="body"><h4>Ceramic Spray <span class="pr">$40</span></h4><p>Months of extra gloss and water-beading protection.</p></div>
+      </div>
+      <div class="aoc reveal">
+        <div class="ba2"><figure><span class="tag b">Before</span><img src="images/int-before.jpg" alt="Dirty carpet and mats before extraction" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/int-after.jpg" alt="Clean interior after shampoo extraction" loading="lazy"></figure></div>
+        <div class="body"><h4>Shampoo &amp; Extraction <span class="pr">$60</span></h4><p>Hot-water extraction lifts stains and odours from carpets and seats.</p></div>
+      </div>
+      <div class="aoc reveal">
+        <div class="single"><img src="images/headlight-after.jpg" alt="Restored clear headlight after restoration" loading="lazy"></div>
+        <div class="body"><h4>Headlight Restoration <span class="pr">$45</span></h4><p>Hazy, yellowed lenses brought back to clear for looks and safety.</p></div>
+      </div>
+      <div class="aoc reveal">
+        <div class="single"><img src="images/int-after.jpg" alt="Clean upholstery after pet hair removal" loading="lazy"></div>
+        <div class="body"><h4>Pet Hair Removal <span class="pr">$30</span></h4><p>Embedded fur drawn out of carpets and upholstery.</p></div>
+      </div>
+    </div>
+    <p class="pk-note reveal" style="color:var(--mut)">All prices are add-ons to any detail. Not sure what your car needs? Text a photo and we will recommend the right mix.</p>
   </div>
 </section>
 
@@ -550,11 +591,11 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   <div class="wrap">
     <div class="sec-head reveal"><div class="eyebrow">Recent work</div><h2>A few cars we've brought back.</h2></div>
     <div class="gal">
-      <figure class="big reveal"><img src="images/ba1-after.jpg" alt="Audi interior detailed by AMMO 604" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/ba3-after.jpg" alt="Toyota interior cleaned" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/hero.jpg" alt="Detailed car interior" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/ba2-after.jpg" alt="Rear seats restored after detailing" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/video-poster.jpg" alt="Detailing in progress in Metro Vancouver" loading="lazy"></figure>
+      <figure class="big reveal"><img src="images/hero-tesla.jpg" alt="Satin grey Tesla detailed by AMMO 604" loading="lazy"></figure>
+      <figure class="reveal"><img src="images/paint-after.jpg" alt="Deep gloss detailed paint finish" loading="lazy"></figure>
+      <figure class="reveal"><img src="images/wheel-after.jpg" alt="Cleaned wheel with red brake caliper" loading="lazy"></figure>
+      <figure class="reveal"><img src="images/lexus-rear.jpg" alt="Detailed Lexus exterior in Metro Vancouver" loading="lazy"></figure>
+      <figure class="reveal"><img src="images/int-after.jpg" alt="Clean white leather interior" loading="lazy"></figure>
     </div>
   </div>
 </section>
