@@ -354,6 +354,17 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 .vid-frame video{width:100%;display:block;background:#000}
 .vid-badge{position:absolute;top:12px;left:12px;background:rgba(22,145,78,.96);color:#fff;font-weight:600;font-size:11px;letter-spacing:.04em;padding:6px 12px;border-radius:30px;display:inline-flex;align-items:center;gap:6px}
 .vid-badge i{font-size:14px}
+/* SALE PRICING */
+.was{color:var(--mut);text-decoration:line-through;font-weight:500;margin-right:7px;opacity:.72}
+.cat-row b .was{font-size:.64em}
+.now{color:var(--green-t)}
+.aoc .pr{display:inline-flex;align-items:baseline}
+.aoc .pr .was{font-size:12px;margin-right:5px}
+.sale-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-family:var(--body);font-weight:600;font-size:13.5px;letter-spacing:.03em;padding:10px 20px;border-radius:40px;margin:18px auto 0;position:relative;overflow:hidden}
+.sale-badge i{font-size:17px}
+.sale-badge::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);animation:shine 3.4s ease-in-out infinite}
+@keyframes shine{0%{left:-70%}55%{left:140%}100%{left:140%}}
+@media(prefers-reduced-motion:reduce){.sale-badge::after{display:none}}
 /* QUOTE BAND */
 .quote-band{background:var(--ink);color:#fff;text-align:center}
 .quote-band .qmark{font-size:32px;color:var(--green)}
@@ -522,7 +533,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 <!-- PRICING -->
 <section id="pricing" class="pricing">
   <div class="wrap center">
-    <div class="sec-head reveal"><div class="eyebrow">Pricing</div><h2>One complete detail, one honest price.</h2><p>Transparent pricing by vehicle type. The listed price for your vehicle is the price you pay.</p></div>
+    <div class="sec-head reveal"><div class="eyebrow">Pricing</div><h2>One complete detail, one honest price.</h2><p>Transparent pricing by vehicle type. The listed price for your vehicle is the price you pay.</p><div class="sale-badge"><i class="ti ti-discount-2"></i>25% OFF everything, this week only</div></div>
   </div>
   <div class="wrap">
     <div class="incl reveal">
@@ -545,16 +556,16 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
     <div class="cat-grid">
       <div class="cat reveal">
         <div class="cat-h"><span class="ci"><i class="ti ti-car"></i></span><div><h3>Sedan / Coupe</h3><span>Cars, coupes &amp; smaller vehicles</span></div></div>
-        <div class="cat-row"><span>Interior Detail</span><b>$129</b></div>
-        <div class="cat-row"><span>Exterior Detail</span><b>$129</b></div>
-        <div class="cat-row feat"><span class="lab"><span class="star">★</span>Full Detail <span class="pill">Best value</span></span><b>$219</b></div>
+        <div class="cat-row"><span>Interior Detail</span><b><span class="was">$129</span><span class="now">$97</span></b></div>
+        <div class="cat-row"><span>Exterior Detail</span><b><span class="was">$129</span><span class="now">$97</span></b></div>
+        <div class="cat-row feat"><span class="lab"><span class="star">★</span>Full Detail <span class="pill">Best value</span></span><b><span class="was">$219</span><span class="now">$164</span></b></div>
         <a class="btn btn-ink" href="#book">Book Sedan / Coupe</a>
       </div>
       <div class="cat reveal">
         <div class="cat-h"><span class="ci"><i class="ti ti-car-suv"></i></span><div><h3>SUV / Crossover</h3><span>SUVs, crossovers &amp; larger vehicles</span></div></div>
-        <div class="cat-row"><span>Interior Detail</span><b>$159</b></div>
-        <div class="cat-row"><span>Exterior Detail</span><b>$159</b></div>
-        <div class="cat-row feat"><span class="lab"><span class="star">★</span>Full Detail <span class="pill">Best value</span></span><b>$249</b></div>
+        <div class="cat-row"><span>Interior Detail</span><b><span class="was">$159</span><span class="now">$119</span></b></div>
+        <div class="cat-row"><span>Exterior Detail</span><b><span class="was">$159</span><span class="now">$119</span></b></div>
+        <div class="cat-row feat"><span class="lab"><span class="star">★</span>Full Detail <span class="pill">Best value</span></span><b><span class="was">$249</span><span class="now">$187</span></b></div>
         <a class="btn btn-ink" href="#book">Book SUV / Crossover</a>
       </div>
     </div>
@@ -568,27 +579,27 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
     <div class="addon-grid">
       <div class="aoc reveal">
         <div class="single"><img src="images/paint-after.jpg" alt="Car paint polished to a deep mirror gloss" loading="lazy"></div>
-        <div class="body"><h4>Paint Correction, Stage 1 <span class="pr">$200-$450</span></h4><p>A one-stage machine polish that removes light swirls and haze for a deep, reflective gloss.</p></div>
+        <div class="body"><h4>Paint Correction, Stage 1 <span class="pr"><span class="was">$200-$450</span><span class="now">$150-$338</span></span></h4><p>A one-stage machine polish that removes light swirls and haze for a deep, reflective gloss.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/rocker-gloss.jpg" alt="Lexus paint with bonded contamination before clay bar" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/paint-after.jpg" alt="Lexus paint glossy and glass-smooth after clay bar" loading="lazy"></figure></div>
-        <div class="body"><h4>Clay Bar <span class="pr">$30</span></h4><p>Pulls bonded grime out of the paint for a glass-smooth, glossy finish.</p></div>
+        <div class="body"><h4>Clay Bar <span class="pr"><span class="was">$30</span><span class="now">$23</span></span></h4><p>Pulls bonded grime out of the paint for a glass-smooth, glossy finish.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/rocker-gloss.jpg" alt="Lexus paint before ceramic protection" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/lexus-rear.jpg" alt="Lexus paint glossy and protected after ceramic spray" loading="lazy"></figure></div>
-        <div class="body"><h4>Ceramic Spray <span class="pr">$40</span></h4><p>Months of extra gloss and water-beading protection on your paint.</p></div>
+        <div class="body"><h4>Ceramic Spray <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Months of extra gloss and water-beading protection on your paint.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/ba1-before.jpg" alt="Stained car seat before shampoo extraction" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/ba1-after.jpg" alt="Clean car seat after shampoo extraction" loading="lazy"></figure></div>
-        <div class="body"><h4>Shampoo &amp; Extraction <span class="pr">$40</span></h4><p>Hot-water extraction lifts stains and odours right out of your seats.</p></div>
+        <div class="body"><h4>Shampoo &amp; Extraction <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Hot-water extraction lifts stains and odours right out of your seats.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="single"><img src="images/ba3-after.jpg" alt="Spotless car carpet after cleaning" loading="lazy"></div>
-        <div class="body"><h4>Pet Hair Removal <span class="pr">$30</span></h4><p>Embedded fur and debris drawn out for a spotless carpet.</p></div>
+        <div class="body"><h4>Pet Hair Removal <span class="pr"><span class="was">$30</span><span class="now">$23</span></span></h4><p>Embedded fur and debris drawn out for a spotless carpet.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="single"><img src="images/headlight-after.jpg" alt="Restored clear headlight" loading="lazy"></div>
-        <div class="body"><h4>Headlight Restoration <span class="pr">$35</span></h4><p>Hazy, yellowed lenses brought back to clear for looks and safety.</p></div>
+        <div class="body"><h4>Headlight Restoration <span class="pr"><span class="was">$35</span><span class="now">$26</span></span></h4><p>Hazy, yellowed lenses brought back to clear for looks and safety.</p></div>
       </div>
     </div>
     <p class="pk-note reveal" style="color:var(--mut)">All prices are add-ons to any detail. Not sure what your car needs? Text a photo and we will recommend the right mix.</p>
@@ -601,7 +612,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
     <div class="sec-head reveal"><div class="eyebrow">Why AMMO 604</div><h2>Five reasons drivers keep coming back.</h2></div>
     <div class="why-grid">
       <div class="why reveal"><div class="ic"><i class="ti ti-home-2"></i></div><h3>We come to you</h3><p>Your driveway is the shop. You never lift a finger or lose your parking spot.</p></div>
-      <div class="why reveal"><div class="ic"><i class="ti ti-bolt"></i></div><h3>60-second quote</h3><p>Text one photo and get a real, final price back in about a minute.</p></div>
+      <div class="why reveal"><div class="ic"><i class="ti ti-bolt"></i></div><h3>60-second quote, or 10% off</h3><p>Text one photo and get a real price back in about a minute. If we take longer, your detail is 10% off.</p></div>
       <div class="why reveal"><div class="ic"><i class="ti ti-receipt-off"></i></div><h3>No hidden fees</h3><p>The price you see is the price you pay. Zero travel charge, ever.</p></div>
       <div class="why reveal"><div class="ic"><i class="ti ti-shield-check"></i></div><h3>Done right, guaranteed</h3><p>We don't pack up until it's perfect. You pay when the job's done.</p></div>
       <div class="why reveal"><div class="ic"><i class="ti ti-diamond"></i></div><h3>Any car, showroom finish</h3><p>Daily driver or dream car, every vehicle is treated like our own.</p></div>
@@ -733,7 +744,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
     <div class="lbl">Limited-time offer</div>
     <div class="big">25%<span> OFF</span></div>
     <div class="sub">everything</div>
-    <p>Every detail and add-on. Mention this offer when you book and we will take 25% off your price.</p>
+    <p>25% off every detail and add-on. And if we don't reply within a minute of your text, you get an extra 10% off.</p>
     <a class="btn btn-ink" id="promoBook" href="#book"><i class="ti ti-calendar-check"></i>Claim my 25% off</a>
     <div class="fine"><a id="promoNo">No thanks, maybe later</a></div>
   </div>
