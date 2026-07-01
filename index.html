@@ -354,6 +354,22 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 .vid-frame video{width:100%;display:block;background:#000}
 .vid-badge{position:absolute;top:12px;left:12px;background:rgba(22,145,78,.96);color:#fff;font-weight:600;font-size:11px;letter-spacing:.04em;padding:6px 12px;border-radius:30px;display:inline-flex;align-items:center;gap:6px}
 .vid-badge i{font-size:14px}
+/* PROMO POPUP */
+.promo{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(8,8,10,.62);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.promo.show{opacity:1;visibility:visible}
+.promo-card{position:relative;background:#fff;border-radius:22px;max-width:430px;width:100%;padding:46px 36px 34px;text-align:center;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);transform:translateY(18px) scale(.98);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.promo.show .promo-card{transform:none}
+.promo-x{position:absolute;top:14px;right:15px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line2);background:#fff;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:.2s}
+.promo-x:hover{background:var(--ink);color:#fff}
+.promo .lbl{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-t)}
+.promo .big{font-family:var(--disp);font-weight:600;font-size:clamp(56px,15vw,78px);line-height:.94;margin:12px 0 0;color:var(--ink)}
+.promo .big span{color:var(--green-t)}
+.promo .sub{font-family:var(--disp);font-weight:500;font-size:26px;color:var(--ink);margin-bottom:16px}
+.promo p{color:var(--mut);font-size:15px;max-width:320px;margin:0 auto 24px;line-height:1.5}
+.promo .btn{width:100%}
+.promo .fine{margin-top:15px}
+.promo .fine a{font-size:13px;color:var(--mut);text-decoration:underline;cursor:pointer}
+.promo .fine a:hover{color:var(--ink)}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none}*{scroll-behavior:auto}}
 </style>
 </head>
@@ -694,6 +710,19 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   <a class="c" href="tel:+17782294212"><i class="ti ti-phone"></i>Call</a>
 </div>
 
+<!-- PROMO POPUP -->
+<div class="promo" id="promo" role="dialog" aria-modal="true" aria-label="25 percent off offer">
+  <div class="promo-card">
+    <button class="promo-x" id="promoX" aria-label="Close offer"><i class="ti ti-x"></i></button>
+    <div class="lbl">Limited-time offer</div>
+    <div class="big">25%<span> OFF</span></div>
+    <div class="sub">everything</div>
+    <p>Every detail and add-on. Mention this offer when you book and we will take 25% off your price.</p>
+    <a class="btn btn-ink" id="promoBook" href="#book"><i class="ti ti-calendar-check"></i>Claim my 25% off</a>
+    <div class="fine"><a id="promoNo">No thanks, maybe later</a></div>
+  </div>
+</div>
+
 <!-- SCHEMA -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AutoDetailing","name":"AMMO 604 Auto Detailing","image":"https://ammo604autodetailing.com/images/extra-detail.jpg","url":"https://ammo604autodetailing.com/","telephone":"+1-778-229-4212","email":"ammo604autodetailing@gmail.com","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Cash, e-Transfer","areaServed":["Burnaby","Vancouver","Coquitlam","Surrey","Richmond"],"address":{"@type":"PostalAddress","addressRegion":"BC","addressCountry":"CA","addressLocality":"Burnaby"},"sameAs":["https://instagram.com/AMMO604auto"],"makesOffer":[{"@type":"Offer","name":"Interior Detail (Sedan/Coupe)","price":"129","priceCurrency":"CAD"},{"@type":"Offer","name":"Exterior Detail (Sedan/Coupe)","price":"129","priceCurrency":"CAD"},{"@type":"Offer","name":"Full Detail (Sedan/Coupe)","price":"219","priceCurrency":"CAD"},{"@type":"Offer","name":"Interior Detail (SUV/Crossover)","price":"159","priceCurrency":"CAD"},{"@type":"Offer","name":"Exterior Detail (SUV/Crossover)","price":"159","priceCurrency":"CAD"},{"@type":"Offer","name":"Full Detail (SUV/Crossover)","price":"249","priceCurrency":"CAD"}]}
@@ -715,6 +744,18 @@ document.querySelectorAll('.q button').forEach(b=>{b.addEventListener('click',()
 (function(){const r=document.getElementById('baRange'),b=document.getElementById('baBefore'),h=document.getElementById('baHandle');function set(p){b.style.clipPath='inset(0 '+(100-p)+'% 0 0)';h.style.left=p+'%';}if(r){r.addEventListener('input',e=>set(e.target.value));set(50);}})();
 // Quote -> SMS
 function sendQuote(e){e.preventDefault();const n=document.getElementById('q-name').value.trim(),v=document.getElementById('q-vehicle').value.trim(),ty=document.getElementById('q-type').value,s=document.getElementById('q-service').value,a=document.getElementById('q-area').value;const msg="Hi AMMO 604! I'd like to book a detail.\nName: "+n+"\nVehicle: "+v+"\nType: "+ty+"\nPackage: "+s+"\nArea: "+a;const sep=/iphone|ipad|ipod|mac/i.test(navigator.userAgent)?'&':'?';location.href='sms:+17782294212'+sep+'body='+encodeURIComponent(msg);return false;}
+// Promo popup (25% off), once per session
+(function(){
+  var promo=document.getElementById('promo'); if(!promo) return;
+  function seen(){try{return sessionStorage.getItem('promoSeen');}catch(e){return false;}}
+  function close(){promo.classList.remove('show');try{sessionStorage.setItem('promoSeen','1');}catch(e){}}
+  if(!seen()){setTimeout(function(){promo.classList.add('show');},900);}
+  document.getElementById('promoX').addEventListener('click',close);
+  document.getElementById('promoNo').addEventListener('click',close);
+  document.getElementById('promoBook').addEventListener('click',close);
+  promo.addEventListener('click',function(e){if(e.target===promo)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
 // Subtle 3D depth (skipped on touch / reduced-motion)
 (function(){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches||!matchMedia('(hover:hover)').matches)return;
