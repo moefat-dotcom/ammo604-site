@@ -388,6 +388,13 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 .cmp-cell .no{color:#cfcfd4;font-size:19px}
 .cmp-cell .mid{color:#bd934a;font-size:19px}
 .cmp-note{text-align:center;color:var(--mut);font-size:13px;margin-top:18px}
+.cmp-cell .txt{font-size:12.5px;color:var(--ink2);font-weight:500;text-align:center;line-height:1.3}
+.cmp-cell.us .txt{color:var(--green-t);font-weight:600}
+.cmp-row.price{background:rgba(22,145,78,.05)}
+.cmp-row.price .cmp-feat{font-family:'Archivo';font-weight:600;font-size:15px}
+.cmp-row.price .cmp-cell .txt{font-family:'Archivo';font-weight:700;font-size:16px;color:var(--ink)}
+.cmp-row.price .cmp-cell.us .txt{font-size:23px;color:var(--green-t)}
+.was-sm{display:block;font-family:'Inter';font-size:11px;color:var(--mut);text-decoration:line-through;font-weight:500}
 @media(max-width:640px){
   .cmp-row{grid-template-columns:1.5fr .85fr .85fr .85fr}
   .cmp-feat{padding:12px 12px;font-size:12.5px}
@@ -396,6 +403,9 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   .cmp-head .cl.us{font-size:12px}
   .cmp-cell{padding:12px 4px}
   .cmp-cell i{font-size:19px}
+  .cmp-cell .txt{font-size:10px}
+  .cmp-row.price .cmp-cell .txt{font-size:11.5px}
+  .cmp-row.price .cmp-cell.us .txt{font-size:16px}
 }
 /* QUOTE BAND */
 .quote-band{background:var(--ink);color:#fff;text-align:center}
@@ -565,66 +575,60 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 <!-- COMPARISON -->
 <section id="compare" class="compare">
   <div class="wrap center">
-    <div class="sec-head reveal"><div class="eyebrow">How we compare</div><h2>An honest look at your options.</h2><p style="margin-left:auto;margin-right:auto">Mobile detailing done right, next to the usual alternatives. No spin, just the facts.</p></div>
+    <div class="sec-head reveal"><div class="eyebrow">Price &amp; value comparison</div><h2>The same full detail, for hundreds less.</h2><p style="margin-left:auto;margin-right:auto">How AMMO 604 stacks up against a typical detail shop and a dealership in Metro Vancouver.</p></div>
   </div>
   <div class="wrap">
     <div class="cmp reveal">
       <div class="cmp-row cmp-head">
-        <div class="cl first">What matters</div>
+        <div class="cl first">Full detail, sedan</div>
         <div class="cl us">AMMO 604</div>
-        <div class="cl">Typical detailer</div>
-        <div class="cl">Drive-thru wash</div>
+        <div class="cl">Detail shop</div>
+        <div class="cl">Dealership</div>
+      </div>
+      <div class="cmp-row price">
+        <div class="cmp-feat">Price for a full detail</div>
+        <div class="cmp-cell us"><span class="txt"><span class="was-sm">$200</span>$160</span></div>
+        <div class="cmp-cell"><span class="txt">$250&ndash;$400</span></div>
+        <div class="cmp-cell"><span class="txt">$300&ndash;$500</span></div>
       </div>
       <div class="cmp-row">
-        <div class="cmp-feat">Comes to your home or work</div>
+        <div class="cmp-feat">Comes to you, fully mobile</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Your time lost</div>
+        <div class="cmp-cell us"><span class="txt">None</span></div>
+        <div class="cmp-cell"><span class="txt">Drop off, half day</span></div>
+        <div class="cmp-cell"><span class="txt">A full day</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Everything included, no upsells</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><span class="txt">Add-ons extra</span></div>
+        <div class="cmp-cell"><span class="txt">Add-ons extra</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">60-second text-a-photo quote</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Same-week booking</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><span class="txt">Often 1 week+</span></div>
+        <div class="cmp-cell"><span class="txt">1&ndash;2 weeks</span></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Guarantee, pay when done</div>
         <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
         <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
         <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">No travel or hidden fees</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Instant text-a-photo quote</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Complete detail, everything included</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Hand-finished, never rushed</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Deep interior clean &amp; stain extraction</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Satisfaction guarantee, pay when done</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
-        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
-      </div>
-      <div class="cmp-row">
-        <div class="cmp-feat">Same-week availability</div>
-        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
-        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
-        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
       </div>
     </div>
-    <p class="cmp-note reveal">Check = included &nbsp;·&nbsp; Dash = sometimes or varies &nbsp;·&nbsp; Cross = not offered</p>
+    <p class="cmp-note reveal">Detail shop and dealership figures are typical Metro Vancouver rates for a full sedan detail. Your AMMO 604 price is shown with this week's 20% off.</p>
   </div>
 </section>
 
