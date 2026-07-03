@@ -407,6 +407,9 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   .cmp-row.price .cmp-cell .txt{font-size:11.5px}
   .cmp-row.price .cmp-cell.us .txt{font-size:16px}
 }
+/* ECO */
+.eco-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+@media(max-width:860px){.eco-grid{grid-template-columns:1fr;gap:34px}}
 /* QUOTE BAND */
 .quote-band{background:var(--ink);color:#fff;text-align:center}
 .quote-band .qmark{font-size:32px;color:var(--green)}
@@ -685,23 +688,23 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/rocker-gloss.jpg" alt="Lexus paint with bonded contamination before clay bar" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/paint-after.jpg" alt="Lexus paint glossy and glass-smooth after clay bar" loading="lazy"></figure></div>
-        <div class="body"><h4>Clay Bar <span class="pr"><span class="was">$25</span><span class="now">$20</span></span></h4><p>Pulls bonded grime out of the paint for a glass-smooth, glossy finish.</p></div>
+        <div class="body"><h4>Clay Bar <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Pulls bonded grime out of the paint for a glass-smooth, glossy finish.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/rocker-gloss.jpg" alt="Lexus paint before ceramic protection" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/lexus-rear.jpg" alt="Lexus paint glossy and protected after ceramic spray" loading="lazy"></figure></div>
-        <div class="body"><h4>Ceramic Spray <span class="pr"><span class="was">$50</span><span class="now">$40</span></span></h4><p>Months of extra gloss and water-beading protection on your paint.</p></div>
+        <div class="body"><h4>Ceramic Spray <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Months of extra gloss and water-beading protection on your paint.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="ba2"><figure><span class="tag b">Before</span><img src="images/ba1-before.jpg" alt="Stained car seat before shampoo extraction" loading="lazy"></figure><figure><span class="tag a">After</span><img src="images/ba1-after.jpg" alt="Clean car seat after shampoo extraction" loading="lazy"></figure></div>
-        <div class="body"><h4>Shampoo &amp; Extraction <span class="pr"><span class="was">$50</span><span class="now">$40</span></span></h4><p>Hot-water extraction lifts stains and odours right out of your seats.</p></div>
+        <div class="body"><h4>Shampoo &amp; Extraction <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Hot-water extraction lifts stains and odours right out of your seats.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="single"><img src="images/ba3-after.jpg" alt="Spotless car carpet after cleaning" loading="lazy"></div>
-        <div class="body"><h4>Pet Hair Removal <span class="pr"><span class="was">$25</span><span class="now">$20</span></span></h4><p>Embedded fur and debris drawn out for a spotless carpet.</p></div>
+        <div class="body"><h4>Pet Hair Removal <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Embedded fur and debris drawn out for a spotless carpet.</p></div>
       </div>
       <div class="aoc reveal">
         <div class="single"><img src="images/headlight-after.jpg" alt="Restored clear headlight" loading="lazy"></div>
-        <div class="body"><h4>Headlight Restoration <span class="pr"><span class="was">$50</span><span class="now">$40</span></span></h4><p>Hazy, yellowed lenses brought back to clear for looks and safety.</p></div>
+        <div class="body"><h4>Headlight Restoration <span class="pr"><span class="was">$40</span><span class="now">$30</span></span></h4><p>Hazy, yellowed lenses brought back to clear for looks and safety.</p></div>
       </div>
     </div>
     <p class="pk-note reveal" style="color:var(--mut)">All prices are add-ons to any detail. Not sure what your car needs? Text a photo and we will recommend the right mix.</p>
@@ -731,16 +734,23 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   </div>
 </section>
 
-<!-- GALLERY -->
-<section style="background:var(--ivory)">
-  <div class="wrap">
-    <div class="sec-head reveal"><div class="eyebrow">Recent work</div><h2>A few cars we've brought back.</h2></div>
-    <div class="gal">
-      <figure class="big reveal"><img src="images/hero-tesla.jpg" alt="Satin grey Tesla detailed by AMMO 604" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/paint-after.jpg" alt="Glossy detailed Lexus paint" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/int-cockpit.jpg" alt="Clean white leather interior after detailing" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/lexus-rear.jpg" alt="Detailed Lexus exterior in Metro Vancouver" loading="lazy"></figure>
-      <figure class="reveal"><img src="images/int-after.jpg" alt="Clean white leather seat after detailing" loading="lazy"></figure>
+<!-- ECO SAFE -->
+<section id="eco" style="background:var(--ivory)">
+  <div class="wrap eco-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--green-t)">Safe for your family</div>
+      <h2 class="sec-h" style="margin-top:14px">Clean car. Clean air. <span style="color:var(--green-t)">Non-toxic.</span></h2>
+      <p style="color:var(--ink2);font-size:16.5px;margin-top:18px;max-width:520px">Most car cleaning sprays are loaded with harsh chemicals and VOCs that linger in your cabin, the same enclosed air your kids and pets breathe on every drive.</p>
+      <p style="color:var(--ink2);font-size:16.5px;margin-top:14px;max-width:520px">That's why AMMO 604 is moving to <b>eco-safe, non-toxic products</b> across every detail, among the first mobile detailers in Metro Vancouver to make that commitment. The same showroom finish, without the chemical cloud.</p>
+      <p style="color:var(--mut);font-size:13.5px;margin-top:18px;max-width:520px">Don't take our word for it: a study in the <a href="https://www.cmaj.ca/content/192/7/E154" style="color:var(--green-t);font-weight:600;text-decoration:underline">Canadian Medical Association Journal</a> linked frequent household cleaning-product use around infants to higher rates of childhood asthma, and research in the <a href="https://www.atsjournals.org/doi/full/10.1164/rccm.201706-1311OC" style="color:var(--green-t);font-weight:600;text-decoration:underline">American Journal of Respiratory and Critical Care Medicine</a> found regular exposure to chemical cleaners can measurably reduce lung function over time.</p>
+    </div>
+    <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--sh-sm)">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;gap:14px;align-items:flex-start"><i class="ti ti-lungs" style="font-size:26px;color:var(--green-t);flex-shrink:0"></i><div><b style="font-size:15.5px">Kinder to lungs</b><p style="color:var(--mut);font-size:13.5px;margin-top:3px">No harsh VOC fumes trapped in your cabin after the clean.</p></div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start"><i class="ti ti-baby-carriage" style="font-size:26px;color:var(--green-t);flex-shrink:0"></i><div><b style="font-size:15.5px">Safe around kids &amp; pets</b><p style="color:var(--mut);font-size:13.5px;margin-top:3px">Car seats, mats and surfaces cleaned with family-safe products.</p></div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start"><i class="ti ti-leaf" style="font-size:26px;color:var(--green-t);flex-shrink:0"></i><div><b style="font-size:15.5px">Gentler on the planet</b><p style="color:var(--mut);font-size:13.5px;margin-top:3px">Biodegradable formulas, not chemical runoff into local storm drains.</p></div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start"><i class="ti ti-sparkles" style="font-size:26px;color:var(--green-t);flex-shrink:0"></i><div><b style="font-size:15.5px">Zero compromise on shine</b><p style="color:var(--mut);font-size:13.5px;margin-top:3px">The same deep, showroom result you hired us for.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
