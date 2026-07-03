@@ -12,7 +12,10 @@
 <meta property="og:title" content="AMMO 604 Auto Detailing | Mobile Detailing in Metro Vancouver">
 <meta property="og:description" content="A showroom-clean car, without leaving your driveway. Mobile service included, no hidden fees.">
 <meta property="og:url" content="https://ammo604autodetailing.com/">
-<meta property="og:image" content="https://ammo604autodetailing.com/images/extra-detail.jpg">
+<meta property="og:image" content="https://ammo604autodetailing.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://ammo604autodetailing.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
@@ -368,6 +371,32 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 .sale-badge::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);animation:shine 3.4s ease-in-out infinite}
 @keyframes shine{0%{left:-70%}55%{left:140%}100%{left:140%}}
 @media(prefers-reduced-motion:reduce){.sale-badge::after{display:none}}
+/* COMPARISON */
+.compare{background:var(--ivory)}
+.cmp{max-width:940px;margin:48px auto 0;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 18px 40px -26px rgba(10,22,38,.35)}
+.cmp-row{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr}
+.cmp-row:not(:last-child){border-bottom:1px solid var(--line)}
+.cmp-head{background:var(--ink);color:#fff}
+.cmp-head .cl{padding:16px 10px;text-align:center;font-weight:600;font-size:13px;line-height:1.25;display:flex;align-items:center;justify-content:center}
+.cmp-head .cl.first{text-align:left;justify-content:flex-start;padding-left:22px;color:#b9c0c9;font-weight:600}
+.cmp-head .cl.us{background:var(--green);color:#fff;font-weight:700;font-family:'Archivo';letter-spacing:.02em;font-size:14px}
+.cmp-feat{padding:15px 22px;font-size:14.5px;font-weight:500;color:var(--ink);display:flex;align-items:center}
+.cmp-cell{padding:15px 10px;display:flex;align-items:center;justify-content:center}
+.cmp-cell.us{background:rgba(22,145,78,.06)}
+.cmp-cell i{font-size:22px}
+.cmp-cell .yes{color:var(--green-t)}
+.cmp-cell .no{color:#cfcfd4;font-size:19px}
+.cmp-cell .mid{color:#bd934a;font-size:19px}
+.cmp-note{text-align:center;color:var(--mut);font-size:13px;margin-top:18px}
+@media(max-width:640px){
+  .cmp-row{grid-template-columns:1.5fr .85fr .85fr .85fr}
+  .cmp-feat{padding:12px 12px;font-size:12.5px}
+  .cmp-head .cl{font-size:10.5px;padding:12px 4px}
+  .cmp-head .cl.first{padding-left:12px}
+  .cmp-head .cl.us{font-size:12px}
+  .cmp-cell{padding:12px 4px}
+  .cmp-cell i{font-size:19px}
+}
 /* QUOTE BAND */
 .quote-band{background:var(--ink);color:#fff;text-align:center}
 .quote-band .qmark{font-size:32px;color:var(--green)}
@@ -530,6 +559,72 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       <a class="btn btn-ink" href="#book"><i class="ti ti-calendar-check"></i>Book Your Detail</a>
     </div>
     <div class="show-r reveal"><canvas id="wheel3d" aria-hidden="true"></canvas></div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="compare" class="compare">
+  <div class="wrap center">
+    <div class="sec-head reveal"><div class="eyebrow">How we compare</div><h2>An honest look at your options.</h2><p style="margin-left:auto;margin-right:auto">Mobile detailing done right, next to the usual alternatives. No spin, just the facts.</p></div>
+  </div>
+  <div class="wrap">
+    <div class="cmp reveal">
+      <div class="cmp-row cmp-head">
+        <div class="cl first">What matters</div>
+        <div class="cl us">AMMO 604</div>
+        <div class="cl">Typical detailer</div>
+        <div class="cl">Drive-thru wash</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Comes to your home or work</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">No travel or hidden fees</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Instant text-a-photo quote</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Complete detail, everything included</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Hand-finished, never rushed</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Deep interior clean &amp; stain extraction</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Satisfaction guarantee, pay when done</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
+        <div class="cmp-cell"><i class="ti ti-x no"></i></div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Same-week availability</div>
+        <div class="cmp-cell us"><i class="ti ti-check yes"></i></div>
+        <div class="cmp-cell"><i class="ti ti-minus mid"></i></div>
+        <div class="cmp-cell"><i class="ti ti-check yes"></i></div>
+      </div>
+    </div>
+    <p class="cmp-note reveal">Check = included &nbsp;·&nbsp; Dash = sometimes or varies &nbsp;·&nbsp; Cross = not offered</p>
   </div>
 </section>
 
