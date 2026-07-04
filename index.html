@@ -401,6 +401,19 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
 /* ECO */
 .eco-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
 @media(max-width:860px){.eco-grid{grid-template-columns:1fr;gap:34px}}
+/* REFERRAL */
+.refer{background:var(--char);color:#f3f1ea}
+.refer-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.refer h2{color:#fff;font-size:clamp(36px,5.4vw,58px);line-height:1.05;margin-top:14px}
+.refer h2 span{color:#34c177}
+.r-lead{color:#bdb9ae;font-size:16.5px;max-width:480px}
+.r-opts{display:flex;gap:14px;margin:20px 0;flex-wrap:wrap}
+.r-opt{flex:1;min-width:200px;display:flex;gap:13px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(52,193,119,.3);border-radius:16px;padding:16px 18px}
+.r-opt i{font-size:26px;color:#34c177;flex-shrink:0}
+.r-opt b{font-family:var(--disp);font-weight:600;font-size:19px;color:#fff;display:block}
+.r-opt span{font-size:12.5px;color:#9a968c}
+.r-note{color:#9a968c;font-size:13.5px;margin-bottom:22px}
+@media(max-width:860px){.refer-grid{grid-template-columns:1fr;gap:26px}}
 /* QUOTE BAND */
 .quote-band{background:var(--ink);color:#fff;text-align:center}
 .quote-band .qmark{font-size:32px;color:var(--green)}
@@ -733,6 +746,25 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
   </div>
 </section>
 
+<!-- REFERRAL -->
+<section id="refer" class="refer">
+  <div class="wrap refer-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:#34c177">Referral rewards</div>
+      <h2>Give a detail.<br>Get <span>$25.</span></h2>
+    </div>
+    <div class="reveal">
+      <p class="r-lead">Know someone whose car needs us? When they book and mention your name, you choose your reward:</p>
+      <div class="r-opts">
+        <div class="r-opt"><i class="ti ti-cash"></i><div><b>$25 cash</b><span>sent by e-transfer after their detail</span></div></div>
+        <div class="r-opt"><i class="ti ti-discount-2"></i><div><b>25% off</b><span>your next detail with us</span></div></div>
+      </div>
+      <p class="r-note">No limit. Refer three friends, stack three rewards. It's our way of saying thanks for spreading the word.</p>
+      <a class="btn btn-ink" href="sms:+17782294212?&body=Hi%20AMMO%20604!%20I%20want%20to%20refer%20a%20friend%20for%20a%20detail.%20My%20name%20is%3A"><i class="ti ti-user-plus"></i>Refer a friend</a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap center">
@@ -744,6 +776,7 @@ footer{background:var(--bg);padding:60px 0 120px;border-top:1px solid var(--line
       <div class="q reveal"><button>How long does a detail take? <i class="ti ti-plus"></i></button><div class="ans"><p>An interior or exterior detail usually takes one to two hours. A full detail typically takes two to four hours, depending on the size and condition of the car. We give you a time estimate with your quote.</p></div></div>
       <div class="q reveal"><button>How do I get a price? <i class="ti ti-plus"></i></button><div class="ans"><p>Text a photo of your car to 778-229-4212 and we will reply quickly with a clear, final price. You can also use the booking form below or call us directly.</p></div></div>
       <div class="q reveal"><button>How do I pay? <i class="ti ti-plus"></i></button><div class="ans"><p>We accept cash and e-transfer. Payment is collected once the job is done.</p></div></div>
+      <div class="q reveal"><button>How does the referral reward work? <i class="ti ti-plus"></i></button><div class="ans"><p>Simple. Tell a friend about us, and when they book their detail and mention your name, you choose your reward: $25 cash by e-transfer, or 25% off your next detail. There is no limit on how many friends you can refer.</p></div></div>
     </div>
   </div>
 </section>
